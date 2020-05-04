@@ -1,8 +1,6 @@
 pipeline{
   agent any
-  environment {
-    PATH = "${PATH}:${getTerraformPath()}"
-  }
+ 
   stages{
     stage('S3Bucket'){
 	  steps{
