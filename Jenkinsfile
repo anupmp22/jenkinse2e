@@ -13,7 +13,7 @@ pipeline{
 	stage('TF-Backend'){
 	  steps{
 	    sh "terraform init"
-		// sh "ansible-playbook terraformbackend.yml"
+		 sh "ansible-playbook terraformbackend.yml"
 		sh "terraform apply -auto-approve"
 		sh "rm -rf ansible.cfg"
 		}
