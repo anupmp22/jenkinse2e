@@ -1,10 +1,13 @@
 pipeline{
   agent any
- 
+ environment {
+    PATH = "${PATH}:${getTerraformPath()}"
+ }
   stages{
     stage('S3Bucket'){
 	  steps{
-	  
+	       sh "cp /etc/ansible/ansible.cfg-org ."
+		sh "mv ansible.cfg-org ansible.cfg"
 		sh "ansible-playbook s3bucket.yml"
 		}
 	}
