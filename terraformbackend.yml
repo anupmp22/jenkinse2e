@@ -10,6 +10,6 @@
         lock: yes
         backend_config:
           region: "ap-south-1"
-          bucket: "jenkins-devops-poc-backend"
+          bucket: "jenkins-devops-poc-backend-mp"
           key: "backend.tfstate"
-          dynamodb_table: "my-backend-lock"
+          dynamodb_table: "my-backend-lock-mp"
